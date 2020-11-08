@@ -22,4 +22,8 @@ public class PlayerControl : MonoBehaviour
 
         rb.AddForce(movement * speed);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Trigger");
+    }
 }
