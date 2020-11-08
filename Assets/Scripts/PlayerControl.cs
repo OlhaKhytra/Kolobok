@@ -5,8 +5,13 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public float speed;
+   
+    public int jumpForce;
+    public bool isGround;
+   
 
     private Rigidbody rb;
+    
 
     void Start()
     {
@@ -21,9 +26,26 @@ public class PlayerControl : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce(movement * speed);
+
+        Jump();
     }
-    private void OnTriggerEnter(Collider other)
+
+    public void Jump()
     {
-        Debug.Log("Trigger");
+        Ray ray = new Ray(gameObject.transform.position, Vector3.down);
+        RaycastHit rh;
+        if (Physics.Raycast(ray, out rh, 0.5f))
+        {
+            isGround = true;
+        }
+        else
+        {
+            isGround = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && isGround)
+        {
+            rb.AddForce(Vector3.up * jumpForce);
+        }
     }
+  
 }
