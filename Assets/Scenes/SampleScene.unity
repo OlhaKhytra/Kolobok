@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 32.2
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: aa138ca28327e784197275d1eb2474cc, type: 2}
 --- !u!1 &139072460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1177438073412356194, guid: 9e0bcef4673447742b8f022d2434b311,
@@ -136,13 +136,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 139072460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abd8b4410fab3ca44bc028ac8e1e3468, type: 3}
+  m_Script: {fileID: 11500000, guid: 3863cfbc43cf9d94e8e314a35891bfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2038128411}
-  move_speed: 4
-  rotation_speed: 4
-  enemy: {fileID: 139072465}
+  timer: 0
+  newtarget: 2
+  speed: 5
+  nav: {fileID: 139072467}
+  Target: {x: 0, y: 0, z: 0}
 --- !u!4 &139072465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9130907642662859543, guid: 9e0bcef4673447742b8f022d2434b311,
@@ -165,6 +166,44 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!195 &139072467
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139072460}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &139072468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139072460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd8b4410fab3ca44bc028ac8e1e3468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2038128411}
+  move_speed: 6
+  rotation_speed: 6
+  enemy: {fileID: 139072465}
 --- !u!1 &182243291
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182243291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.62, y: -0.28, z: -35.1}
+  m_LocalPosition: {x: 19.62, y: -0.28, z: -35.83}
   m_LocalScale: {x: 2.1180034, y: 1, z: 6.950536}
   m_Children: []
   m_Father: {fileID: 0}
@@ -551,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3309e5da6756741854ed2d7ba9dafd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 7
   jumpForce: 300
   isGround: 0
 --- !u!1001 &904957337606688675
@@ -853,7 +892,7 @@ PrefabInstance:
     - target: {fileID: 9130907642662859543, guid: 9e0bcef4673447742b8f022d2434b311,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -14.29
       objectReference: {fileID: 0}
     - target: {fileID: 9130907642662859543, guid: 9e0bcef4673447742b8f022d2434b311,
         type: 3}
@@ -1166,6 +1205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339170151650733700, guid: 82b4de95d5e8a3447aeca666d5ebfbb5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8339170151650733702, guid: 82b4de95d5e8a3447aeca666d5ebfbb5,
         type: 3}
