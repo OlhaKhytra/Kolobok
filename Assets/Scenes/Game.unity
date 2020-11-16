@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  newtarget: 2
-  speed: 5
+  newtarget: 4
+  speed: 10
   nav: {fileID: 139072467}
   Target: {x: 0, y: 0, z: 0}
 --- !u!4 &139072465 stripped
@@ -176,7 +176,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2038128411}
-  move_speed: 6
-  rotation_speed: 3
+  move_speed: 10
+  rotation_speed: 5
   enemy: {fileID: 139072465}
 --- !u!114 &139072469
 MonoBehaviour:
@@ -261,7 +261,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182243291}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8556085, y: 0.102921486, z: 0.99999976}
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   jumpForce: 300
-  isGround: 0
+  isGround: 1
 --- !u!1 &2045179402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1969,7 @@ PrefabInstance:
     - target: {fileID: 9130907642662859543, guid: 9e0bcef4673447742b8f022d2434b311,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: -5.6
       objectReference: {fileID: 0}
     - target: {fileID: 9130907642662859543, guid: 9e0bcef4673447742b8f022d2434b311,
         type: 3}
@@ -1979,7 +1979,7 @@ PrefabInstance:
     - target: {fileID: 9130907642662859543, guid: 9e0bcef4673447742b8f022d2434b311,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.29
+      value: 27.6
       objectReference: {fileID: 0}
     - target: {fileID: 9130907642662859543, guid: 9e0bcef4673447742b8f022d2434b311,
         type: 3}
