@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
     {
         Ray ray = new Ray(gameObject.transform.position, Vector3.down);
         RaycastHit rh;
-        if (Physics.Raycast(ray, out rh, 0.55f))
+        if (Physics.Raycast(ray, out rh, 0.6f))
         {
             isGround = true;
         }
