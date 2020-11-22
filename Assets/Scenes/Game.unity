@@ -1257,8 +1257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79dc8665ca0cf7a4f86bf377772d2c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
-  spawnPoint: {fileID: 1537301576}
 --- !u!54 &1975157746
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1375,7 +1373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   jumpForce: 300
-  isGround: 0
+  isGround: 1
 --- !u!1 &2045179402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,7 +1797,7 @@ PrefabInstance:
     - target: {fileID: 1026457842433138683, guid: 2e0c54e21f0192b49b4be6c5ebc23da4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8
+      value: -46.3
       objectReference: {fileID: 0}
     - target: {fileID: 1026457842433138683, guid: 2e0c54e21f0192b49b4be6c5ebc23da4,
         type: 3}
@@ -1880,7 +1878,7 @@ PrefabInstance:
     - target: {fileID: 1871855176544344212, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -44.8
       objectReference: {fileID: 0}
     - target: {fileID: 1871855176544344212, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
@@ -1937,10 +1935,30 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2038128406}
+    - target: {fileID: 1871855176544344215, guid: 48e664bead2dfe44f93181554fb0a17a,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 2038128411}
+    - target: {fileID: 1871855176544344215, guid: 48e664bead2dfe44f93181554fb0a17a,
+        type: 3}
+      propertyPath: LookAtPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871855176544344215, guid: 48e664bead2dfe44f93181554fb0a17a,
+        type: 3}
+      propertyPath: smoothFactor
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 1871855176544344216, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871855176544344216, guid: 48e664bead2dfe44f93181554fb0a17a,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48e664bead2dfe44f93181554fb0a17a, type: 3}
