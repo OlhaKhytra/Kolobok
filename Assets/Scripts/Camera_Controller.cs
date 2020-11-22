@@ -10,7 +10,7 @@ public class Camera_Controller : MonoBehaviour
 
     public Vector3 cameraOffset;
 
-    public float smoothFactor = 0.5f;
+    public float smoothFactor = 0.9f;
 
     public bool LookAtPlayer = false;
 

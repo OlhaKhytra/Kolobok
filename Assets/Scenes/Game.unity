@@ -176,7 +176,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -261,7 +261,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182243291}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8556085, y: 0.102921486, z: 0.99999976}
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1975157744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79dc8665ca0cf7a4f86bf377772d2c50, type: 3}
+  m_Script: {fileID: 11500000, guid: f69971c1698c88d40bc7d3e3f7dc95c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &1975157746
@@ -1797,7 +1797,7 @@ PrefabInstance:
     - target: {fileID: 1026457842433138683, guid: 2e0c54e21f0192b49b4be6c5ebc23da4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.3
+      value: -46
       objectReference: {fileID: 0}
     - target: {fileID: 1026457842433138683, guid: 2e0c54e21f0192b49b4be6c5ebc23da4,
         type: 3}
@@ -1878,17 +1878,17 @@ PrefabInstance:
     - target: {fileID: 1871855176544344212, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.8
+      value: -46
       objectReference: {fileID: 0}
     - target: {fileID: 1871855176544344212, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1871855176544344212, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1871855176544344212, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
@@ -1943,12 +1943,17 @@ PrefabInstance:
     - target: {fileID: 1871855176544344215, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
       propertyPath: LookAtPlayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1871855176544344215, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
       propertyPath: smoothFactor
-      value: 0.9
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871855176544344215, guid: 48e664bead2dfe44f93181554fb0a17a,
+        type: 3}
+      propertyPath: cameraOffset.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1871855176544344216, guid: 48e664bead2dfe44f93181554fb0a17a,
         type: 3}
