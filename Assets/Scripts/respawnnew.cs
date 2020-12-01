@@ -7,6 +7,7 @@ using UnityEngine;
 public class respawnnew : MonoBehaviour
 {
     private Scene scene;
+    
     void Start()
     {
         scene = SceneManager.GetActiveScene();
@@ -16,7 +17,9 @@ public class respawnnew : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Application.LoadLevel(scene.name);
+          
+            SceneManager.LoadScene(scene.name);
+            //Application.LoadLevel(scene.name);
         }
     }
 }
