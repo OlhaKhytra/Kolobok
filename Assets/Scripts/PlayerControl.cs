@@ -47,5 +47,12 @@ public class PlayerControl : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce);
         }
     }
-  
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pick up"))
+        {
+            other.gameObject.SetActive (false);
+        }
+    }
+    
 }
