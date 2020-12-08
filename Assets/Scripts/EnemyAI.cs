@@ -13,8 +13,8 @@ public class EnemyAI : MonoBehaviour
 
     void Start ()
     {
-        if (GameObject.FindGameObjectWithTag("Kolobok").activeInHierarchy)
-            playerTransform = GameObject.FindGameObjectWithTag("Kolobok").transform;
+        if (GameObject.FindGameObjectWithTag("Player").activeInHierarchy)
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         myNavmesh = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
