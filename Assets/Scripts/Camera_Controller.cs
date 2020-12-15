@@ -2,28 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_Controller : MonoBehaviour
-{
+public class Camera_Controller : MonoBehaviour {
     public Transform playerTransform;
 
-    public Vector3 cameraOffset;
 
     public float smoothFactor = 0.9f;
 
     public bool LookAtPlayer = false;
 
-    void Start()
-    {
-        cameraOffset = transform.position - playerTransform.position;
-    }
 
-    void LateUpdate()
-    {
-        Vector3 newPosition = playerTransform.position + cameraOffset;
-        transform.position = Vector3.Slerp(transform.position, newPosition, smoothFactor);
+    void LateUpdate() {
+        transform.position = Vector3.Slerp(transform.position, playerTransform.position, smoothFactor);
 
-        if (LookAtPlayer)
-        {
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.ProjectOnPlane(playerTransform.GetComponent<Rigidbody>().velocity, Vector3.up), Vector3.up), smoothFactor);
+        ////Vector3 newPosition = playerTransform.position + cameraOffset;
+        //
+
+        if(LookAtPlayer) {
             transform.LookAt(playerTransform);
         }
     }
